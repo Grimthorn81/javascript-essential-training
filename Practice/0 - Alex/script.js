@@ -50,3 +50,23 @@ console.log("The force is: ", squadTeam1.squadForce);
 squadTeam1.consumeForce(1);
 
 console.log("The new force is: ", squadTeam1.squadForce);
+
+// HTML
+const addUnit = function (currentUnit) {
+  const newUnit = document.createElement("unit");
+  console.log(currentUnit);
+  newUnit.innerHTML = `
+    <h1>${currentUnit.name}</h1>
+    <ul>
+      <li>Stamina: ${currentUnit.stamina}</li>
+      <li>Durability: ${currentUnit.durability}</li>
+      <li>Number of Characters: ${currentUnit.numChar}</li>
+    </ul>
+  `;
+  return newUnit;
+};
+
+const main = document.querySelector("main");
+console.log(addUnit(primary1));
+main.append(addUnit(primary1));
+main.append(addUnit(support1));
