@@ -13,7 +13,7 @@ const everydayPack = new Backpack(
   15,
   26,
   26,
-  false,
+  "Toto",
   "December 5, 2018 15:00:00 PST",
   "../assets/images/everyday.svg"
 );
@@ -41,7 +41,7 @@ const content = `
         everydayPack.strapLength.right
       } inches</span></li>
       <li class="feature backpack__lid">Lid status:<span> ${
-        everydayPack.lidOpen ? "open" : "closed"
+        everydayPack.lidOpen === "Toto" ? "open" : "closed"
       }</span></li>
     </ul>
   `;
@@ -56,7 +56,7 @@ newArticle.innerHTML = content;
 main.append(newArticle);
 
 if (everydayPack.backpackAge() >= 30) {
-  console.log("Backpack is used")
+  console.log("Backpack is used");
 } else {
-  console.log("Backpack is new")
+  console.log("Backpack is new");
 }
